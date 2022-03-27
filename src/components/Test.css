@@ -7,3 +7,46 @@
   background-color: #293241;
   flex-direction: column;
 }
+
+.questionCount {
+  color: #e0fbfc;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.question {
+  color: #e0fbfc;
+  margin: 0;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.qu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 30vh;
+}
+
+.an {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 70vh;
+}
+
+.btn {
+  width: 300px;
+  height: 65px;
+  background-color: #e0fbfc;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+#firstBox {
+  margin-top: 80px;
+}
