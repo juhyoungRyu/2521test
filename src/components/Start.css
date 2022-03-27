@@ -1,0 +1,71 @@
+.Start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #293241;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 20vh;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100vw;
+  height: 40vh;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 30vh;
+}
+
+.title {
+  color: #e0fbfc;
+  font-size: 30px;
+  font-family: "Nanum Brush Script", cursive;
+  margin: 0;
+}
+
+.sub {
+  color: #e0fbfc;
+  font-size: 35px;
+  margin: 0;
+  font-family: "Black Han Sans", sans-serif;
+}
+
+.copy {
+  color: #e0fbfc;
+  font-family: "Nanum Brush Script", cursive;
+  margin-top: 100px;
+}
+
+.startBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* margin-bottom: 40px; */
+  background-color: #3d5a80;
+  font-family: "Black Han Sans", sans-serif;
+  color: #e0fbfc;
+  font-size: 30px;
+  border-radius: 15px;
+  width: 200px;
+  height: 70px;
+  text-align: center;
+  cursor: pointer;
+}

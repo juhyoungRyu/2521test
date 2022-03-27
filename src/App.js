@@ -1,7 +1,13 @@
+import React, { useState } from "react";
 import "./App.css";
+import Start from "./components/Start";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Start />
+    </div>
+  );
 }
 
 export default App;
