@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import "./App.css";
 import Start from "./components/Start";
+import Test from "./components/Test";
 
-function App() {
+const App = () => {
+  const [start, setStart] = useState(false);
+
   return (
     <div className="App">
-      <Start />
+      {start ? <Test /> : <Start func={() => setStart(true)} />}
     </div>
   );
-}
+};
 
 export default App;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Start.css";
 
-const Start = () => {
+const Start = (props) => {
   return (
     <div className="Start">
       <section className="top">
@@ -9,7 +9,9 @@ const Start = () => {
         <p className="sub">인물 유형 테스트</p>
       </section>
       <section className="middle">
-        <div className="startBtn">시작하기 🤺</div>
+        <div className="startBtn" onClick={props.func}>
+          시작하기
+        </div>
       </section>
       <section className="bottom">
         <p className="copy">&copy; 2022 2521 character test</p>
