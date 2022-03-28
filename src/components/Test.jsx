@@ -6,6 +6,7 @@ const Test = () => {
   const [btnValue1, setBtnValue1] = useState("");
   const [btnValue2, setBtnValue2] = useState("");
   const [userAnswer, setUserAnswer] = useState([""]);
+  const [testing, setTesting] = useState(false);
 
   useEffect(() => {
     return judge(questionCount);
@@ -48,8 +49,8 @@ const Test = () => {
   ];
 
   const judge = (c) => {
-    if (c == 11) {
-      console.log(userAnswer);
+    if (c === 11) {
+      return console.log(userAnswer);
     }
 
     setBtnValue1(answer[c].a1);
@@ -66,26 +67,43 @@ const Test = () => {
   };
 
   return (
-    <div className="Test">
-      <section className="qu">
-        <p className="question">{question[questionCount]}</p>
-        <p className="questionCount">{questionCount}/10</p>
-        <div className="imgCon">움짤이 들어올 자리입니다</div>
-      </section>
-      <section className="an">
-        <div
-          className="btn"
-          id="firstBox"
-          onClick={() => {
-            answerSave(btnValue1);
-          }}
-        >
-          {btnValue1}
+    <div className="all">
+      {testing ? (
+        <div className="result">결과가 나오겠죠?</div>
+      ) : (
+        <div className="Test">
+          <section className="qu">
+            <p className="question">{question[questionCount]}</p>
+            <p className="questionCount">{questionCount}/10</p>
+            <div className="imgCon">움짤이 들어올 자리입니다</div>
+          </section>
+          <section className="an">
+            <div
+              className="btn"
+              id="firstBox"
+              onClick={() => {
+                if (btnValue1 === answer[10].a1) {
+                  return setTesting(true);
+                }
+                return answerSave(btnValue1);
+              }}
+            >
+              {btnValue1}
+            </div>
+            <div
+              className="btn"
+              onClick={() => {
+                if (btnValue2 === answer[10].a2) {
+                  return setTesting(true);
+                }
+                return answerSave(btnValue2);
+              }}
+            >
+              {btnValue2}
+            </div>
+          </section>
         </div>
-        <div className="btn" onClick={() => answerSave(btnValue2)}>
-          {btnValue2}
-        </div>
-      </section>
+      )}
     </div>
   );
 };

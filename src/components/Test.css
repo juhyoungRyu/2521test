@@ -1,3 +1,10 @@
+.all {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+
 .Test {
   display: flex;
   justify-content: center;
@@ -64,4 +71,15 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.result {
+  color: #e0fbfc;
+  background-color: #293241;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
 }
