@@ -69,7 +69,12 @@ const Test = () => {
   return (
     <div className="all">
       {testing ? (
-        <div className="result">결과가 나오겠죠?</div>
+        <div className="result">
+          <p>결과가 나오겠죠?</p>
+          {userAnswer.map((ans) => (
+            <p>{ans}</p>
+          ))}
+        </div>
       ) : (
         <div className="Test">
           <section className="qu">
@@ -83,6 +88,7 @@ const Test = () => {
               id="firstBox"
               onClick={() => {
                 if (btnValue1 === answer[10].a1) {
+                  answerSave(btnValue1);
                   return setTesting(true);
                 }
                 return answerSave(btnValue1);
@@ -94,6 +100,7 @@ const Test = () => {
               className="btn"
               onClick={() => {
                 if (btnValue2 === answer[10].a2) {
+                  answerSave(btnValue2);
                   return setTesting(true);
                 }
                 return answerSave(btnValue2);
