@@ -68,36 +68,7 @@ const Test = () => {
 
   const mbti = (mbti) => {
     let i = 1;
-    for (i; i < 11; i++) {
-      if (i >= 3) {
-        switch (mbti[i]) {
-          case answer[i].a1:
-            console.log("e");
-            break;
-          case answer[i].a2:
-            console.log("i");
-            break;
-        }
-      }elif(i >=6) {
-        switch (mbti[i]) {
-          case answer[i].a1:
-            console.log("p");
-            break;
-          case answer[i].a2:
-            console.log("j");
-            break;
-        }elif(i >=8) {
-          switch (mbti[i]) {
-            case answer[i].a1:
-              console.log("f");
-              break;
-            case answer[i].a2:
-              console.log("t");
-              break;
-          }
-        }
-      }
-    }
+    for (i; i < 11; i++) {}
   };
 
   return (
