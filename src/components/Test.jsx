@@ -66,13 +66,47 @@ const Test = () => {
     setQuestionCount(countTemp + 1);
   };
 
+  const mbti = (mbti) => {
+    let i = 1;
+    for (i; i < 11; i++) {
+      if (i >= 3) {
+        switch (mbti[i]) {
+          case answer[i].a1:
+            console.log("e");
+            break;
+          case answer[i].a2:
+            console.log("i");
+            break;
+        }
+      }elif(i >=6) {
+        switch (mbti[i]) {
+          case answer[i].a1:
+            console.log("p");
+            break;
+          case answer[i].a2:
+            console.log("j");
+            break;
+        }elif(i >=8) {
+          switch (mbti[i]) {
+            case answer[i].a1:
+              console.log("f");
+              break;
+            case answer[i].a2:
+              console.log("t");
+              break;
+          }
+        }
+      }
+    }
+  };
+
   return (
     <div className="all">
       {testing ? (
         <div className="result">
-          <p>결과가 나오겠죠?</p>
+          <p onClick={() => mbti(userAnswer)}>결과가 나오겠죠?</p>
           {userAnswer.map((ans) => (
-            <p>{ans}</p>
+            <p key={ans}>{ans}</p>
           ))}
         </div>
       ) : (
