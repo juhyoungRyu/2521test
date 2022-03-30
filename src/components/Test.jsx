@@ -12,14 +12,6 @@ const Test = () => {
     return judge(questionCount);
   }, [questionCount]);
 
-  useEffect(() => {
-    if (userAnswer.length === 11) {
-      return console.log("완료");
-    }
-
-    return console.log(userAnswer, userAnswer.length - 1);
-  }, [userAnswer]);
-
   const question = [
     "",
     "첫 번째 질문입니다",
@@ -32,6 +24,8 @@ const Test = () => {
     "여덜 번째 질문입니다",
     "아홉 번째 질문입니다",
     "열 번째 질문입니다",
+    "열 한 번째 질문입니다",
+    "열 두 번째 질문입니다",
   ];
 
   const answer = [
@@ -46,10 +40,12 @@ const Test = () => {
     { a1: "8-1 답변", a2: "8-2 답변" },
     { a1: "9-1 답변", a2: "9-2 답변" },
     { a1: "10-1 답변", a2: "10-2 답변" },
+    { a1: "11-1 답변", a2: "11-2 답변" },
+    { a1: "12-1 답변", a2: "12-2 답변" },
   ];
 
   const judge = (c) => {
-    if (c === 11) {
+    if (c === 13) {
       return console.log(userAnswer);
     }
 
@@ -66,9 +62,47 @@ const Test = () => {
     setQuestionCount(countTemp + 1);
   };
 
+  const eiJudge = (c, i) => {
+    if (c === answer[i].a1) {
+      console.log("e");
+    } else {
+      console.log("i");
+    }
+  };
+  const snJudge = (c, i) => {
+    if (c === answer[i]) {
+      console.log("s");
+    } else {
+      console.log("n");
+    }
+  };
+  const tfJudge = (c, i) => {
+    if (c === answer[i]) {
+      console.log("t");
+    } else {
+      console.log("f");
+    }
+  };
+  const pjJudge = (c, i) => {
+    if (c === answer[i]) {
+      console.log("p");
+    } else {
+      console.log("j");
+    }
+  };
+
   const mbti = (mbti) => {
-    let i = 1;
-    for (i; i < 11; i++) {}
+    for (let i = 1; i < 13; i++) {
+      if (i < 4) {
+        eiJudge(mbti[i], i);
+      } else if (i < 7) {
+        snJudge(mbti[i], i);
+      } else if (i < 10) {
+        tfJudge(mbti[i], i);
+      } else {
+        pjJudge(mbti[i], i);
+      }
+    }
   };
 
   return (
@@ -84,7 +118,9 @@ const Test = () => {
         <div className="Test">
           <section className="qu">
             <p className="question">{question[questionCount]}</p>
-            <p className="questionCount">{questionCount}/10</p>
+            <p className="questionCount">
+              {questionCount}/{question.length - 1}
+            </p>
             <div className="imgCon">움짤이 들어올 자리입니다</div>
           </section>
           <section className="an">
@@ -92,7 +128,7 @@ const Test = () => {
               className="btn"
               id="firstBox"
               onClick={() => {
-                if (btnValue1 === answer[10].a1) {
+                if (btnValue1 === answer[12].a1) {
                   answerSave(btnValue1);
                   return setTesting(true);
                 }
@@ -104,7 +140,7 @@ const Test = () => {
             <div
               className="btn"
               onClick={() => {
-                if (btnValue2 === answer[10].a2) {
+                if (btnValue2 === answer[12].a2) {
                   answerSave(btnValue2);
                   return setTesting(true);
                 }
