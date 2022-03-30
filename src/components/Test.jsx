@@ -6,6 +6,7 @@ const Test = () => {
   const [btnValue1, setBtnValue1] = useState("");
   const [btnValue2, setBtnValue2] = useState("");
   const [userAnswer, setUserAnswer] = useState([""]);
+  const [mbtiArray, setMbtiArray] = useState([""]);
   const [testing, setTesting] = useState(false);
 
   useEffect(() => {
@@ -64,30 +65,38 @@ const Test = () => {
 
   const eiJudge = (c, i) => {
     if (c === answer[i].a1) {
-      console.log("e");
+      setMbtiArray([...(mbtiArray + "e")]);
+      console.log(mbtiArray);
     } else {
-      console.log("i");
+      setMbtiArray([...(mbtiArray + "i")]);
+      console.log(mbtiArray);
     }
   };
   const snJudge = (c, i) => {
-    if (c === answer[i]) {
-      console.log("s");
+    if (c === answer[i].a1) {
+      setMbtiArray([...(mbtiArray + "s")]);
+      console.log(mbtiArray);
     } else {
-      console.log("n");
+      setMbtiArray([...(mbtiArray + "n")]);
+      console.log(mbtiArray);
     }
   };
   const tfJudge = (c, i) => {
-    if (c === answer[i]) {
-      console.log("t");
+    if (c === answer[i].a1) {
+      setMbtiArray([...(mbtiArray + "t")]);
+      console.log(mbtiArray);
     } else {
-      console.log("f");
+      setMbtiArray([...(mbtiArray + "f")]);
+      console.log(mbtiArray);
     }
   };
   const pjJudge = (c, i) => {
-    if (c === answer[i]) {
-      console.log("p");
+    if (c === answer[i].a1) {
+      setMbtiArray([...(mbtiArray + "p")]);
+      console.log(mbtiArray);
     } else {
-      console.log("j");
+      setMbtiArray([...(mbtiArray + "j")]);
+      console.log(mbtiArray);
     }
   };
 
