@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Result from "./Result";
 import "./Test.css";
 
 const Test = () => {
@@ -106,10 +107,7 @@ const Test = () => {
   return (
     <div className="all">
       {testing ? (
-        <div className="result">
-          <p>결과는 ??</p>
-          <p>{userMbti}</p>
-        </div>
+        <Result mbti={userMbti} />
       ) : (
         <div className="Test">
           <section className="qu">
