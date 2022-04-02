@@ -46,7 +46,7 @@ const Test = () => {
 
   const judge = (c) => {
     if (c === 13) {
-      return console.log(userAnswer);
+      return console.log(mbti());
     }
 
     setBtnValue1(answer[c].a1.slice(0, answer[c].a1.length - 1));
@@ -60,6 +60,46 @@ const Test = () => {
 
     let countTemp = questionCount;
     setQuestionCount(countTemp + 1);
+  };
+
+  const mbti = () => {
+    const judge = (char, i, j) => {
+      let cnt = 0;
+      for (i; i < j; i++) {
+        if (userAnswer[i] === char) {
+          cnt++;
+        }
+      }
+      return cnt;
+    };
+
+    let result = [];
+
+    if (judge("E", 1, 4) >= 2) {
+      result.push("E");
+    } else {
+      result.push("I");
+    }
+
+    if (judge("T", 4, 7) >= 2) {
+      result.push("T");
+    } else {
+      result.push("F");
+    }
+
+    if (judge("N", 7, 10) >= 2) {
+      result.push("N");
+    } else {
+      result.push("S");
+    }
+
+    if (judge("P", 10, 13) >= 2) {
+      result.push("P");
+    } else {
+      result.push("F");
+    }
+
+    return result;
   };
 
   return (
