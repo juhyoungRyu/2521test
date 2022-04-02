@@ -6,6 +6,7 @@ const Test = () => {
   const [btnValue1, setBtnValue1] = useState("");
   const [btnValue2, setBtnValue2] = useState("");
   const [userAnswer, setUserAnswer] = useState([""]);
+  const [userMbti, setUserMbti] = useState([""]);
   const [testing, setTesting] = useState(false);
 
   useEffect(() => {
@@ -46,7 +47,7 @@ const Test = () => {
 
   const judge = (c) => {
     if (c === 13) {
-      return console.log(mbti());
+      return setUserMbti(mbti());
     }
 
     setBtnValue1(answer[c].a1.slice(0, answer[c].a1.length - 1));
@@ -81,22 +82,22 @@ const Test = () => {
       result.push("I");
     }
 
-    if (judge("T", 4, 7) >= 2) {
-      result.push("T");
-    } else {
-      result.push("F");
-    }
-
     if (judge("N", 7, 10) >= 2) {
       result.push("N");
     } else {
       result.push("S");
     }
 
+    if (judge("T", 4, 7) >= 2) {
+      result.push("T");
+    } else {
+      result.push("F");
+    }
+
     if (judge("P", 10, 13) >= 2) {
       result.push("P");
     } else {
-      result.push("F");
+      result.push("J");
     }
 
     return result;
@@ -106,17 +107,8 @@ const Test = () => {
     <div className="all">
       {testing ? (
         <div className="result">
-          <p
-            onClick={() => {
-              let a = "hello";
-              console.log(a.slice(a.length - 1));
-            }}
-          >
-            결과가 나오겠죠?
-          </p>
-          {userAnswer.map((ans) => (
-            <p>{ans}</p>
-          ))}
+          <p>결과는 ??</p>
+          <p>{userMbti}</p>
         </div>
       ) : (
         <div className="Test">
