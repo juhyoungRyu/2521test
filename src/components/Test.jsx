@@ -6,7 +6,6 @@ const Test = () => {
   const [btnValue1, setBtnValue1] = useState("");
   const [btnValue2, setBtnValue2] = useState("");
   const [userAnswer, setUserAnswer] = useState([""]);
-  const [mbtiArray, setMbtiArray] = useState([""]);
   const [testing, setTesting] = useState(false);
 
   useEffect(() => {
@@ -31,18 +30,18 @@ const Test = () => {
 
   const answer = [
     {},
-    { a1: "1-1 답변", a2: "1-2 답변" },
-    { a1: "2-1 답변", a2: "2-2 답변" },
-    { a1: "3-1 답변", a2: "3-2 답변" },
-    { a1: "4-1 답변", a2: "4-2 답변" },
-    { a1: "5-1 답변", a2: "5-2 답변" },
-    { a1: "6-1 답변", a2: "6-2 답변" },
-    { a1: "7-1 답변", a2: "7-2 답변" },
-    { a1: "8-1 답변", a2: "8-2 답변" },
-    { a1: "9-1 답변", a2: "9-2 답변" },
-    { a1: "10-1 답변", a2: "10-2 답변" },
-    { a1: "11-1 답변", a2: "11-2 답변" },
-    { a1: "12-1 답변", a2: "12-2 답변" },
+    { a1: "1-1 답변E", a2: "1-2 답변I" },
+    { a1: "2-1 답변E", a2: "2-2 답변I" },
+    { a1: "3-1 답변E", a2: "3-2 답변I" },
+    { a1: "4-1 답변T", a2: "4-2 답변F" },
+    { a1: "5-1 답변T", a2: "5-2 답변F" },
+    { a1: "6-1 답변T", a2: "6-2 답변F" },
+    { a1: "7-1 답변N", a2: "7-2 답변S" },
+    { a1: "8-1 답변N", a2: "8-2 답변S" },
+    { a1: "9-1 답변N", a2: "9-2 답변S" },
+    { a1: "10-1 답변P", a2: "10-2 답변J" },
+    { a1: "11-1 답변P", a2: "11-2 답변J" },
+    { a1: "12-1 답변P", a2: "12-2 답변J" },
   ];
 
   const judge = (c) => {
@@ -50,8 +49,8 @@ const Test = () => {
       return console.log(userAnswer);
     }
 
-    setBtnValue1(answer[c].a1);
-    setBtnValue2(answer[c].a2);
+    setBtnValue1(answer[c].a1.slice(0, answer[c].a1.length - 1));
+    setBtnValue2(answer[c].a2.slice(0, answer[c].a2.length - 1));
   };
 
   const answerSave = (char) => {
@@ -63,70 +62,28 @@ const Test = () => {
     setQuestionCount(countTemp + 1);
   };
 
-  const eiJudge = (c, i) => {
-    if (c === answer[i].a1) {
-      setMbtiArray([...(mbtiArray + "e")]);
-      console.log(mbtiArray);
-    } else {
-      setMbtiArray([...(mbtiArray + "i")]);
-      console.log(mbtiArray);
-    }
-  };
-  const snJudge = (c, i) => {
-    if (c === answer[i].a1) {
-      setMbtiArray([...(mbtiArray + "s")]);
-      console.log(mbtiArray);
-    } else {
-      setMbtiArray([...(mbtiArray + "n")]);
-      console.log(mbtiArray);
-    }
-  };
-  const tfJudge = (c, i) => {
-    if (c === answer[i].a1) {
-      setMbtiArray([...(mbtiArray + "t")]);
-      console.log(mbtiArray);
-    } else {
-      setMbtiArray([...(mbtiArray + "f")]);
-      console.log(mbtiArray);
-    }
-  };
-  const pjJudge = (c, i) => {
-    if (c === answer[i].a1) {
-      setMbtiArray([...(mbtiArray + "p")]);
-      console.log(mbtiArray);
-    } else {
-      setMbtiArray([...(mbtiArray + "j")]);
-      console.log(mbtiArray);
-    }
-  };
-
-  const mbti = (mbti) => {
-    for (let i = 1; i < 13; i++) {
-      if (i < 4) {
-        eiJudge(mbti[i], i);
-      } else if (i < 7) {
-        snJudge(mbti[i], i);
-      } else if (i < 10) {
-        tfJudge(mbti[i], i);
-      } else {
-        pjJudge(mbti[i], i);
-      }
-    }
-  };
-
   return (
     <div className="all">
       {testing ? (
         <div className="result">
-          <p onClick={() => mbti(userAnswer)}>결과가 나오겠죠?</p>
+          <p
+            onClick={() => {
+              let a = "hello";
+              console.log(a.slice(a.length - 1));
+            }}
+          >
+            결과가 나오겠죠?
+          </p>
           {userAnswer.map((ans) => (
-            <p key={ans}>{ans}</p>
+            <p>{ans}</p>
           ))}
         </div>
       ) : (
         <div className="Test">
           <section className="qu">
-            <p className="question">{question[questionCount]}</p>
+            <p className="question" onClick={() => console.log(questionCount)}>
+              {question[questionCount]}
+            </p>
             <p className="questionCount">
               {questionCount}/{question.length - 1}
             </p>
@@ -137,11 +94,19 @@ const Test = () => {
               className="btn"
               id="firstBox"
               onClick={() => {
-                if (btnValue1 === answer[12].a1) {
-                  answerSave(btnValue1);
+                if (questionCount === 12) {
+                  answerSave(
+                    answer[questionCount].a1.slice(
+                      answer[questionCount].a1.length - 1
+                    )
+                  );
                   return setTesting(true);
                 }
-                return answerSave(btnValue1);
+                return answerSave(
+                  answer[questionCount].a1.slice(
+                    answer[questionCount].a1.length - 1
+                  )
+                );
               }}
             >
               {btnValue1}
@@ -149,11 +114,19 @@ const Test = () => {
             <div
               className="btn"
               onClick={() => {
-                if (btnValue2 === answer[12].a2) {
-                  answerSave(btnValue2);
+                if (questionCount === 12) {
+                  answerSave(
+                    answer[questionCount].a2.slice(
+                      answer[questionCount].a2.length - 1
+                    )
+                  );
                   return setTesting(true);
                 }
-                return answerSave(btnValue2);
+                return answerSave(
+                  answer[questionCount].a2.slice(
+                    answer[questionCount].a2.length - 1
+                  )
+                );
               }}
             >
               {btnValue2}
