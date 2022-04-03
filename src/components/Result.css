@@ -6,4 +6,34 @@
   height: 100vh;
   background-color: #293241;
   flex-direction: column;
+  margin: 0;
+}
+
+.rsTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 20vh;
+  background-color: blue;
+}
+
+.rsMid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 40vh;
+  background-color: red;
+}
+
+.rsBot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 40vh;
+  background-color: yellow;
 }
