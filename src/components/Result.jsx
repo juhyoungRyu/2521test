@@ -16,16 +16,39 @@ const Result = (props) => {
         <p className="sub">인물 유형 테스트</p>
       </section>
       <section className="rsMid">
-        {/* 일러스트 */}
-        <div className="imgCon" />
         {/* 유형 이름 */}
         <p>유형 이름</p>
+        {/* 일러스트 */}
+        <div className="imgCon" />
         {/* 유형 특징 */}
-        <p>유형 특징</p>
+        <div className="explainCon">
+          <p>이 유형은 이렇고 저렇다</p>
+          <p>이 유형은 이렇고 저렇다</p>
+          <p>이 유형은 이렇고 저렇다</p>
+          <p>이 유형은 이렇고 저렇다</p>
+        </div>
       </section>
       <section className="rsBot">
-        {/* 재검사 버튼 */}
-        {/* sns btn */}
+        {/* 잘 맞는 유형 / 안 맞는 유형 */}
+        <div className="goodAndBad">
+          <div className="good">
+            <div>{/* 이미지 */}</div>
+            <p>유형 이름</p>
+          </div>
+          <div className="bad">
+            <div>{/* 이미지 */}</div>
+            <p>유형 이름</p>
+          </div>
+        </div>
+        <div className="rsBtnCon">
+          {/* 재검사 버튼 */}
+          <button>재검사</button>
+          {/* sns btn */}
+          <div className="snsBtn">
+            <button>Github</button>
+            <button>Instagram</button>
+          </div>
+        </div>
       </section>
     </div>
   );

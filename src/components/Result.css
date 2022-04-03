@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 130vh;
   background-color: #293241;
   flex-direction: column;
   margin: 0;
@@ -21,11 +21,11 @@
 
 .rsMid {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  height: 40vh;
+  height: 80vh;
   background-color: red;
 }
 
@@ -33,7 +33,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100vw;
-  height: 40vh;
+  height: 30vh;
   background-color: yellow;
+}
+
+.good {
+}
+
+.rsBtnCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.goodAndBad {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
 }
