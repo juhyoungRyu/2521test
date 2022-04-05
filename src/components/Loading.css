@@ -1,0 +1,10 @@
+.Loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 160vh;
+  background-color: #293241;
+  flex-direction: column;
+  margin: 0;
+}

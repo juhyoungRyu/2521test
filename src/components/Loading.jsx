@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ReactLoading from "react-loading";
+import Result from "./Result";
+import "./Loading.css";
 
-const Loading = () => {
+const Loading = (props) => {
+  const [load, setLoad] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setLoad(true), 2000);
+  }, [load]);
   return (
     <div className="Loading">
-      <ReactLoading />
+      {load ? (
+        <Result mbti={props.mbti} />
+      ) : (
+        <ReactLoading type="bars" color="white" />
+      )}
     </div>
   );
 };

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 98vw;
+  width: 100vw;
   height: 160vh;
   background-color: #293241;
   flex-direction: column;
@@ -91,4 +91,8 @@
 
 .snsBtn {
   margin-top: 20px;
+}
+
+p {
+  margin: 0;
 }

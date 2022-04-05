@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Loading from "./Loading";
 import Result from "./Result";
 import "./Test.css";
 
@@ -107,7 +108,7 @@ const Test = () => {
   return (
     <div className="all">
       {testing ? (
-        <Result mbti={userMbti} />
+        <Loading mbti={userMbti} />
       ) : (
         <div className="Test">
           <section className="qu">
