@@ -42,7 +42,9 @@ const Result = (props) => {
         </div>
         <div className="rsBtnCon">
           {/* 재검사 버튼 */}
-          <button>재검사</button>
+          <div className="reBtn" onClick={() => window.location.reload()}>
+            재검사
+          </div>
           {/* sns btn */}
           <div className="snsBtn">
             <button>Github</button>

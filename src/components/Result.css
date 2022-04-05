@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 130vh;
+  width: 98vw;
+  height: 160vh;
   background-color: #293241;
   flex-direction: column;
   margin: 0;
@@ -16,7 +16,6 @@
   flex-direction: column;
   width: 100vw;
   height: 20vh;
-  background-color: red;
 }
 
 .rsMid {
@@ -26,20 +25,38 @@
   flex-direction: column;
   width: 100vw;
   height: 80vh;
-  background-color: blue;
+  color: white;
 }
 
 .rsBot {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  height: 30vh;
-  background-color: yellow;
+  height: 60vh;
 }
 
 .good {
+  margin: 0;
+  border: 1px solid rgb(255, 255, 255);
+  height: 180px;
+  width: 130px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.bad {
+  margin: 0;
+  border: 1px solid rgb(255, 255, 255);
+  height: 180px;
+  width: 130px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 .rsBtnCon {
@@ -52,5 +69,26 @@
 .goodAndBad {
   display: flex;
   align-content: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  width: 300px;
+}
+
+.reBtn {
+  background-color: #e0fbfc;
+  color: #293241;
+  width: 220px;
+  border-radius: 50px;
+  height: 45px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explainCon {
+  color: white;
+}
+
+.snsBtn {
+  margin-top: 20px;
 }
