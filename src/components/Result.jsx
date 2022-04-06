@@ -14,8 +14,6 @@ const Result = (props) => {
     type = yelloTulip;
   }
 
-  console.log(type);
-
   return (
     <div className="Result">
       <section className="rsTop">
