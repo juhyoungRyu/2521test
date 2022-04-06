@@ -1,5 +1,6 @@
 import React from "react";
 import "./Result.css";
+import { yelloTulip } from "../data.js";
 
 const Result = (props) => {
   const mbti = () => {
@@ -7,6 +8,13 @@ const Result = (props) => {
   };
 
   mbti();
+
+  let type = [];
+  if (props.mbti) {
+    type = yelloTulip;
+  }
+
+  console.log(type);
 
   return (
     <div className="Result">
@@ -17,15 +25,14 @@ const Result = (props) => {
       </section>
       <section className="rsMid">
         {/* 유형 이름 */}
-        <p>유형 이름</p>
+        <p>{type.name}</p>
         {/* 일러스트 */}
         <div className="imgCon" />
         {/* 유형 특징 */}
         <div className="explainCon">
-          <p>이 유형은 이렇고 저렇다</p>
-          <p>이 유형은 이렇고 저렇다</p>
-          <p>이 유형은 이렇고 저렇다</p>
-          <p>이 유형은 이렇고 저렇다</p>
+          {type.explain.map((ex) => (
+            <p>{ex}</p>
+          ))}
         </div>
       </section>
       <section className="rsBot">
@@ -33,11 +40,11 @@ const Result = (props) => {
         <div className="goodAndBad">
           <div className="good">
             <div>{/* 이미지 */}</div>
-            <p>유형 이름</p>
+            <p>{type.good.name}</p>
           </div>
           <div className="bad">
             <div>{/* 이미지 */}</div>
-            <p>유형 이름</p>
+            <p>{type.bad.name}</p>
           </div>
         </div>
         <div className="rsBtnCon">
