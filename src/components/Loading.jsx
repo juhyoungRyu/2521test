@@ -14,7 +14,7 @@ const Loading = (props) => {
       {load ? (
         <Result mbti={props.mbti} />
       ) : (
-        <ReactLoading type="bars" color="white" />
+        <ReactLoading type="bubbles" color="white" />
       )}
     </div>
   );

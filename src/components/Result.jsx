@@ -22,38 +22,28 @@ const Result = (props) => {
         <p className="sub">인물 유형 테스트</p>
       </section>
       <section className="rsMid">
+        <p className="typeTitle">당신의 유형은...</p>
         {/* 유형 이름 */}
-        <p>{type.name}</p>
+        <p className="typeName">{type.name}</p>
         {/* 일러스트 */}
-        <div className="imgCon" />
+        <div className="imgCon1" />
         {/* 유형 특징 */}
         <div className="explainCon">
           {type.explain.map((ex) => (
-            <p>{ex}</p>
+            <p className="ex">⚬ {ex}</p>
           ))}
         </div>
       </section>
       <section className="rsBot">
-        {/* 잘 맞는 유형 / 안 맞는 유형 */}
-        <div className="goodAndBad">
-          <div className="good">
-            <div>{/* 이미지 */}</div>
-            <p>{type.good.name}</p>
-          </div>
-          <div className="bad">
-            <div>{/* 이미지 */}</div>
-            <p>{type.bad.name}</p>
-          </div>
-        </div>
         <div className="rsBtnCon">
           {/* 재검사 버튼 */}
           <div className="reBtn" onClick={() => window.location.reload()}>
-            재검사
+            다시 해보기
           </div>
           {/* sns btn */}
           <div className="snsBtn">
-            <button>Github</button>
-            <button>Instagram</button>
+            <div>Github</div>
+            <div>Instagram</div>
           </div>
         </div>
       </section>
