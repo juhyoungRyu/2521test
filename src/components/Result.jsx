@@ -16,6 +16,8 @@ const Result = (props) => {
     type = yelloTulip;
   }
 
+  console.log(type);
+
   return (
     <div className="Result">
       <section className="rsTop">
@@ -28,7 +30,9 @@ const Result = (props) => {
         {/* 유형 이름 */}
         <p className="typeName">{type.name}</p>
         {/* 일러스트 */}
-        <div className="imgCon1" />
+        <div className="imgCon1">
+          <img src={type.img} />
+        </div>
         {/* 유형 특징 */}
         <div className="explainCon">
           {type.explain.map((ex) => (
