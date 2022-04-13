@@ -1,7 +1,8 @@
 import React from "react";
 import "./Result.css";
-import { yelloTulip, type2, type3, type4, type5 } from "../data.js";
+import { yelloTulip } from "../data.js";
 import githubImg from "../pic/2.png";
+import ytPic from "../pic/yellotulip.jpg";
 import instaImg from "../pic/3.png";
 
 const Result = (props) => {
@@ -30,9 +31,7 @@ const Result = (props) => {
         {/* 유형 이름 */}
         <p className="typeName">{type.name}</p>
         {/* 일러스트 */}
-        <div className="imgCon1">
-          <img src={type.img} />
-        </div>
+        <div className="imgCon1">{type.img}</div>
         {/* 유형 특징 */}
         <div className="explainCon">
           {type.explain.map((ex) => (
