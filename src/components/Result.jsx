@@ -1,6 +1,8 @@
 import React from "react";
 import "./Result.css";
-import { yelloTulip } from "../data.js";
+import { yelloTulip, type2, type3, type4, type5 } from "../data.js";
+import githubImg from "../pic/2.png";
+import instaImg from "../pic/3.png";
 
 const Result = (props) => {
   const mbti = () => {
@@ -42,8 +44,20 @@ const Result = (props) => {
           </div>
           {/* sns btn */}
           <div className="snsBtn">
-            <div>Github</div>
-            <div>Instagram</div>
+            <div
+              className="githubBtn"
+              onClick={() =>
+                window.open("https://github.com/juhyoungRyu/2521test")
+              }
+            >
+              <img className="btnImg" src={githubImg} />
+            </div>
+            <div
+              className="instaBtn"
+              onClick={() => window.open("https://www.instagram.com/jo.oh_/")}
+            >
+              <img className="instaImg" src={instaImg} />
+            </div>
           </div>
         </div>
       </section>

@@ -11,7 +11,12 @@ export const yelloTulip = new TypeMake("외유내강 노랑튤립", "", [
   "대충 이런 설명4",
 ]);
 
-// export const yelloTulip = {
+export const type2 = new TypeMake("", "", []);
+export const type3 = new TypeMake("", "", []);
+export const type4 = new TypeMake("", "", []);
+export const type5 = new TypeMake("", "", []);
+
+// yelloTulip = {
 //   name: "외유내강 노랑튤립",
 //   img: "",
 //   explain: [
