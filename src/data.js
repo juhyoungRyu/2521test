@@ -6,11 +6,10 @@ function TypeMake(name, img, explain) {
   this.explain = [...explain];
 }
 
-const yelloTulip = new TypeMake(
+export const yelloTulip = new TypeMake(
   "외유내강 노랑튤립",
-  { img: ytPic, imgEx: "고유림" }[
-    ("대충 이런 설명1", "대충 이런 설명2", "대충 이런 설명3", "대충 이런 설명4")
-  ]
+  { img: ytPic, imgEx: "고유림" },
+  ["대충 이런 설명1", "대충 이런 설명2", "대충 이런 설명3", "대충 이런 설명4"]
 );
 
 // yelloTulip = {
@@ -23,7 +22,8 @@ const yelloTulip = new TypeMake(
 //     "대충 이런 설명4",
 //   ],
 // };
-const question = [
+
+export const question = [
   "",
   "첫 번째 질문입니다",
   "두 번째 질문입니다",
@@ -39,7 +39,7 @@ const question = [
   "열 두 번째 질문입니다",
 ];
 
-const answer = [
+export const answer = [
   {},
   { a1: "1-1 답변E", a2: "1-2 답변I" },
   { a1: "2-1 답변E", a2: "2-2 답변I" },
@@ -54,5 +54,3 @@ const answer = [
   { a1: "11-1 답변P", a2: "11-2 답변J" },
   { a1: "12-1 답변P", a2: "12-2 답변J" },
 ];
-
-export { question, answer, yelloTulip };
