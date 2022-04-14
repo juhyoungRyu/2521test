@@ -2,7 +2,6 @@ import React from "react";
 import "./Result.css";
 import { yelloTulip } from "../data.js";
 import githubImg from "../pic/2.png";
-import ytPic from "../pic/yellotulip.jpg";
 import instaImg from "../pic/3.png";
 
 const Result = (props) => {
