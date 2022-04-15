@@ -1,5 +1,6 @@
 import React from "react";
 import "./Start.css";
+import back from "../pic/back.png";
 
 const Start = (props) => {
   return (
@@ -9,6 +10,7 @@ const Start = (props) => {
         <p className="sub">인물 유형 테스트</p>
       </section>
       <section className="middle">
+        <img className="startBackground" src={back} alt="" />
         <div className="startBtn" onClick={props.func}>
           시작하기
         </div>
