@@ -33,8 +33,10 @@ const Result = (props) => {
         <div className="imgCon1">{type.img}</div>
         {/* 유형 특징 */}
         <div className="explainCon">
-          {type.explain.map((ex) => (
-            <p className="ex">⚬ {ex}</p>
+          {type.explain.map((ex, key) => (
+            <p key={key} className="ex">
+              ⚬ {ex}
+            </p>
           ))}
         </div>
       </section>
