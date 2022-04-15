@@ -2,7 +2,7 @@ import React from "react";
 import "./Result.css";
 import { yelloTulip } from "../data.js";
 import githubImg from "../pic/2.png";
-import instaImg from "../pic/3.png";
+import instaImg from "../pic/instaImg.png";
 
 const Result = (props) => {
   const mbti = () => {
@@ -46,20 +46,20 @@ const Result = (props) => {
           </div>
           {/* sns btn */}
           <div className="snsBtn">
-            <div
+            <p
               className="githubBtn"
               onClick={() =>
                 window.open("https://github.com/juhyoungRyu/2521test")
               }
             >
-              <img className="btnImg" src={githubImg} />
-            </div>
-            <div
+              소스코드가 궁금하다면?
+            </p>
+            <p
               className="instaBtn"
               onClick={() => window.open("https://www.instagram.com/jo.oh_/")}
             >
-              <img className="instaImg" src={instaImg} />
-            </div>
+              개발자가 누군지 궁금하다면?
+            </p>
           </div>
         </div>
       </section>
