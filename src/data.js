@@ -1,4 +1,8 @@
+// 유형 사진
 import ytPic from "./pic/yellotulip.jpg";
+// 질문 사진
+import qu1 from "./pic/qu1.png";
+import qu2 from "./pic/qu2.jpg";
 
 function TypeMake(name, img, explain) {
   this.name = name;
@@ -25,8 +29,8 @@ export const yelloTulip = new TypeMake(
 
 export const question = [
   "",
-  "첫 번째 질문입니다",
-  "두 번째 질문입니다",
+  "친해지고 싶은 사람이 있을 때, 나는?",
+  "친구와 단둘이 있을 때, 나는?",
   "세 번째 질문입니다",
   "네 번째 질문입니다",
   "다섯 번째 질문입니다",
@@ -41,8 +45,11 @@ export const question = [
 
 export const answer = [
   {},
-  { a1: "1-1 답변E", a2: "1-2 답변I" },
-  { a1: "2-1 답변E", a2: "2-2 답변I" },
+  { a1: "일단 인사부터 건넨다!E", a2: "말을 걸까 고민하다, 고민만 한다...I" },
+  {
+    a1: "질문이나 주제를 꺼내며 대화를 시작한다.E",
+    a2: "친구가 하는 말에 귀를 기울인다.I",
+  },
   { a1: "3-1 답변E", a2: "3-2 답변I" },
   { a1: "4-1 답변T", a2: "4-2 답변F" },
   { a1: "5-1 답변T", a2: "5-2 답변F" },
@@ -54,3 +61,5 @@ export const answer = [
   { a1: "11-1 답변P", a2: "11-2 답변J" },
   { a1: "12-1 답변P", a2: "12-2 답변J" },
 ];
+
+export const imgList = ["", qu1, qu2];

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Loading from "./Loading";
 import "./Test.css";
-import { question, answer } from "../data.js";
+import { question, answer, imgList } from "../data.js";
 
 const Test = () => {
   const [questionCount, setQuestionCount] = useState(1);
@@ -86,7 +86,9 @@ const Test = () => {
             <p className="questionCount">
               {questionCount}/{question.length - 1}
             </p>
-            <div className="imgCon">움짤이 들어올 자리입니다</div>
+            <div className="imgCon">
+              <img className="quImg" alt="" src={imgList[questionCount]} />
+            </div>
           </section>
           <section className="an">
             <div
