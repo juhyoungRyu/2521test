@@ -4,6 +4,8 @@ import ytPic from "./pic/yellotulip.jpg";
 import qu1 from "./pic/qu1.png";
 import qu2 from "./pic/qu2.jpg";
 import qu3 from "./pic/qu3.jpg";
+import qu4 from "./pic/qu4.jpg";
+import qu5 from "./pic/qu5.jpg";
 
 function TypeMake(name, img, explain) {
   this.name = name;
@@ -33,8 +35,8 @@ export const question = [
   "친해지고 싶은 사람이 있을 때, 나는?",
   "친구와 단둘이 있을 때, 나는?",
   "같은 반에 전학을 온 친구가 있다, 나는?",
-  "네 번째 질문입니다",
-  "다섯 번째 질문입니다",
+  "누군가 나를 싫어하는 걸 알았을 때, 나는?",
+  "?? : 그 친구가 잘못했다고 한마디만 해줘...",
   "여섯 번째 질문입니다",
   "일곱 번째 질문입니다",
   "여덜 번째 질문입니다",
@@ -58,8 +60,11 @@ export const answer = [
     a1: "우리 학교 소개해줄까? 말을 건다.E",
     a2: "어떤 친구인지 멀리서 관찰한다.I",
   },
-  { a1: "4-1 답변T", a2: "4-2 답변F" },
-  { a1: "5-1 답변T", a2: "5-2 답변F" },
+  {
+    a1: "?? 왜 싫어하지? (진짜 궁금함)T",
+    a2: "나를 왜 싫어하지..? ㅠㅠ(상처)F",
+  },
+  { a1: "상황을 알려줘야 판단하지T", a2: "무조건 그 친구가 잘못했네!!F" },
   { a1: "6-1 답변T", a2: "6-2 답변F" },
   { a1: "7-1 답변N", a2: "7-2 답변S" },
   { a1: "8-1 답변N", a2: "8-2 답변S" },
@@ -69,4 +74,4 @@ export const answer = [
   { a1: "12-1 답변P", a2: "12-2 답변J" },
 ];
 
-export const imgList = ["", qu1, qu2, qu3];
+export const imgList = ["", qu1, qu2, qu3, qu4, qu5];

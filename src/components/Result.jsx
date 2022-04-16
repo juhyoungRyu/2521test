@@ -1,8 +1,6 @@
 import React from "react";
 import "./Result.css";
 import { yelloTulip } from "../data.js";
-import githubImg from "../pic/2.png";
-import instaImg from "../pic/instaImg.png";
 
 const Result = (props) => {
   const mbti = () => {
