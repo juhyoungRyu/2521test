@@ -1,3 +1,12 @@
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
 .Start {
   display: flex;
   justify-content: center;
@@ -90,5 +99,6 @@
   object-fit: cover;
   margin-top: 30px;
   margin-bottom: 10px;
+  pointer-events: none;
   z-index: 1;
 }

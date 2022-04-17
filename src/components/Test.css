@@ -1,3 +1,10 @@
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .all {
   display: flex;
   width: 100vw;
@@ -46,6 +53,7 @@
   flex-direction: column;
   width: 100vw;
   height: 50vh;
+  cursor: pointer;
 }
 
 .btn {
@@ -74,6 +82,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
   text-align: center;
 }
 
