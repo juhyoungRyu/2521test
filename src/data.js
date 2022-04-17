@@ -9,6 +9,10 @@ import qu5 from "./pic/qu5.jpg";
 import qu6 from "./pic/qu6.jpg";
 import qu7 from "./pic/qu7.jpg";
 import qu8 from "./pic/qu8.jpg";
+import qu9 from "./pic/qu9.jpg";
+import qu10 from "./pic/qu10.jpg";
+import qu11 from "./pic/qu11.jpg";
+import qu12 from "./pic/qu12.jpg";
 
 function TypeMake(name, img, explain) {
   this.name = name;
@@ -43,11 +47,11 @@ export const question = [
   "?? : 그 친구가 잘못했다고 한마디만 해줘...",
   "다음 장면을 보고 나는",
   "처음으로 펜싱 칼을 들어보았다",
-  "여덜 번째 질문입니다",
-  "아홉 번째 질문입니다",
-  "열 번째 질문입니다",
-  "열 한 번째 질문입니다",
-  "열 두 번째 질문입니다",
+  "비가 오면 난 하늘을 보면서",
+  "음악에서 가사와 멜로디 중 더 중요한 것은?",
+  "갑자기 해야 할 일이 생겼을 때, 나는?",
+  "?? : 우리 바다보러 갈까?",
+  "다음 주부터 시험인 것을 오늘 안 나",
 ];
 
 export const answer = [
@@ -81,25 +85,39 @@ export const answer = [
     a2: "무겁네S",
   },
   {
-    a1: "8-1 답변N",
-    a2: "8-2 답변S",
+    a1: "(잠시 나만의 세계에 빠진다)N",
+    a2: "우산 없는데 어쩌지...S",
   },
   {
-    a1: "9-1 답변N",
-    a2: "9-2 답변S",
+    a1: `나는 ㄱㅏ끔,, ㄱrㅅㅏ를 보며,,😭N`,
+    a2: "멜로디가 좋아야 가사에도 관심이 생기지!S",
   },
   {
-    a1: "10-1 답변P",
-    a2: "10-2 답변J",
+    a1: "좋아! 일단 해보자고! 가보자고!P",
+    a2: "후.. 계획부터 세워보자...J",
   },
   {
-    a1: "11-1 답변P",
-    a2: "11-2 답변J",
+    a1: "바다 좋지! 신난다!P",
+    a2: "속초? 부산? 언제 갈건데? 🤨J",
   },
   {
-    a1: "12-1 답변P",
-    a2: "12-2 답변J",
+    a1: "음.. 내일부터 시작하면 되겠지 ㅎP",
+    a2: "아직 7일 남았으니까 하루에 한 과목씩...J",
   },
 ];
 
-export const imgList = ["", qu1, qu2, qu3, qu4, qu5, qu6, qu7, qu8];
+export const imgList = [
+  "",
+  qu1,
+  qu2,
+  qu3,
+  qu4,
+  qu5,
+  qu6,
+  qu7,
+  qu8,
+  qu9,
+  qu10,
+  qu11,
+  qu12,
+];
