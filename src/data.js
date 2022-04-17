@@ -23,7 +23,12 @@ function TypeMake(name, img, explain) {
 export const yelloTulip = new TypeMake(
   "외유내강 노랑튤립",
   { img: ytPic, imgEx: "고유림" },
-  ["대충 이런 설명1", "대충 이런 설명2", "대충 이런 설명3", "대충 이런 설명4"]
+  [
+    "마음이 순하고 따스합니다",
+    "타인의 감정에 지나치게 민감한 경향이 있습니다",
+    "대충 이런 설명3",
+    "대충 이런 설명4",
+  ]
 );
 
 // TypeMake 생성자 함수 결과물
