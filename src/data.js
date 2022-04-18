@@ -1,5 +1,7 @@
 // 유형 사진
 import ytPic from "./pic/yellotulip.jpg";
+import brokenTruck from "./pic/broken8tTruck.jpg";
+import redSporty from "./pic/redSportCar.png";
 // 질문 사진
 import qu1 from "./pic/qu1.png";
 import qu2 from "./pic/qu2.jpg";
@@ -29,6 +31,18 @@ export const yelloTulip = new TypeMake(
     "대충 이런 설명3",
     "대충 이런 설명4",
   ]
+);
+
+export const broken8tTruck = new TypeMake(
+  "핸들이 고장난 8t 트럭",
+  { img: brokenTruck, imgEx: "나희도" },
+  ["대충 이런 설명1", "대충 이런 설명2", "대충 이런 설명3", "대충 이런 설명4"]
+);
+
+export const redSportsCar = new TypeMake(
+  "꼰대기질 빨간 스포츠카",
+  { img: redSporty, imgEx: "백이진" },
+  ["대충 이런 설명1", "대충 이런 설명2", "대충 이런 설명3", "대충 이런 설명4"]
 );
 
 // TypeMake 생성자 함수 결과물

@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Result.css";
 import { yelloTulip } from "../data.js";
 
 const Result = (props) => {
-  const mbti = () => {
-    console.log(props.mbti);
-  };
-
-  mbti();
+  useEffect(() => {
+    if (props.mbti) {
+      console.log(props.mbti);
+    }
+  }, []);
 
   let type = [];
-  if (props.mbti) {
-    type = yelloTulip;
-  }
 
-  console.log(type);
+  const goYelloTulip = () => {
+    type = yelloTulip;
+  };
+  const go8tTruck = () => {};
+  const goRedSporty = () => {};
 
   return (
     <div className="Result">
@@ -44,7 +45,7 @@ const Result = (props) => {
           <div className="reBtn" onClick={() => window.location.reload()}>
             다시 해보기
           </div>
-          {/* sns btn */}
+          w{/* sns btn */}
           <div className="snsBtn">
             <p
               className="githubBtn"
