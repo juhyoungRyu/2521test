@@ -1,27 +1,32 @@
 import React from "react";
 import "./Result.css";
-import { yelloTulip, redSportsCar, broken8tTruck } from "../data.js";
+import { yelloTulip, redSportsCar, broken8tTruck, errorType } from "../data.js";
 
 const Result = (props) => {
-  console.log(props.mbti);
   let type = [];
+  const selectMbti = (t) => {
+    console.log(t);
+    if (t === "INFJ" && t === "ISFP" && t === "ISTJ" && t === "INTP") {
+      type = yelloTulip;
+    } else if (t === "ENTJ" && t === "ISTP" && t === "ISFJ" && t === "INTJ") {
+      type = redSportsCar;
+    } else if (t === "ENFP" && t === "ESTP" && t === "ESFJ") {
+      type = broken8tTruck;
+    } else if (t === "ESFP" && t === "ENTP") {
+      type = errorType;
+      // 문지웅 유형
+    } else if (t === "ESTJ" && t === "INFP" && t === "ENFJ") {
+      type = errorType;
+      // 지승완 유형
+    } else {
+      type = errorType;
+    }
 
-  const goYelloTulip = () => {
-    type = yelloTulip;
-  };
-  const go8tTruck = () => {
-    type = broken8tTruck;
-  };
-  const goRedSporty = () => {
-    type = redSportsCar;
+    // INTJ
+    return console.log(type);
   };
 
-  if (props.mbti.join("") === "ISFJ") {
-    goYelloTulip();
-    console.log(type);
-    console.log(props.mbti);
-  }
-
+  selectMbti(props.mbti.join(""));
   return (
     <div className="Result">
       <section className="rsTop">

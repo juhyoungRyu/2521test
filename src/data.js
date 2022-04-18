@@ -2,6 +2,7 @@
 import ytPic from "./pic/yellotulip.jpg";
 import brokenTruck from "./pic/broken8tTruck.jpg";
 import redSporty from "./pic/redSportCar.png";
+import error from "./pic/error.jpg";
 // 질문 사진
 import qu1 from "./pic/qu1.png";
 import qu2 from "./pic/qu2.jpg";
@@ -44,6 +45,28 @@ export const redSportsCar = new TypeMake(
   { img: redSporty, imgEx: "백이진" },
   ["대충 이런 설명1", "대충 이런 설명2", "대충 이런 설명3", "대충 이런 설명4"]
 );
+
+export const errorType = new TypeMake(
+  "이 유형은 무엇일까요",
+  { img: error, imgEx: "error" },
+  [
+    "이 화면은 오류화면입니다",
+    "개발자가 일을 해야겠네요",
+    "제보 부탁드립니다..ㅠ",
+  ]
+);
+
+// export const redSportsCar = new TypeMake(
+//   "꼰대기질 빨간 스포츠카",
+//   { img: redSporty, imgEx: "지승완" },
+//   ["대충 이런 설명1", "대충 이런 설명2", "대충 이런 설명3", "대충 이런 설명4"]
+// );
+
+// export const redSportsCar = new TypeMake(
+//   "꼰대기질 빨간 스포츠카",
+//   { img: redSporty, imgEx: "문지웅" },
+//   ["대충 이런 설명1", "대충 이런 설명2", "대충 이런 설명3", "대충 이런 설명4"]
+// );
 
 // TypeMake 생성자 함수 결과물
 // yelloTulip = {
