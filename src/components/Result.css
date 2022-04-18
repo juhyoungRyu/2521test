@@ -4,6 +4,8 @@
   height: 130vh;
   background-color: #293241;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0;
 }
 
@@ -64,6 +66,7 @@
 .explainCon {
   color: white;
   margin-top: 20px;
+  width: 300px;
 }
 
 p {
@@ -88,6 +91,7 @@ p {
   font-family: "Gowun Dodum", sans-serif;
   margin-bottom: 5px;
   margin-top: 5px;
+  font-size: 14px;
 }
 
 .imgCon1 {

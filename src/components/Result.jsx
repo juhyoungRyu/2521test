@@ -6,23 +6,21 @@ const Result = (props) => {
   let type = [];
   const selectMbti = (t) => {
     console.log(t);
-    if (t === "INFJ" && t === "ISFP" && t === "ISTJ" && t === "INTP") {
+    if (t === "INFJ" || t === "ISFP" || t === "ISTJ" || t === "INTP") {
       type = yelloTulip;
-    } else if (t === "ENTJ" && t === "ISTP" && t === "ISFJ" && t === "INTJ") {
+    } else if (t === "ENTJ" || t === "ISTP" || t === "ISFJ" || t === "INTJ") {
       type = redSportsCar;
-    } else if (t === "ENFP" && t === "ESTP" && t === "ESFJ") {
+    } else if (t === "ENFP" || t === "ESTP" || t === "ESFJ") {
       type = broken8tTruck;
-    } else if (t === "ESFP" && t === "ENTP") {
+    } else if (t === "ESFP" || t === "ENTP") {
       type = errorType;
       // 문지웅 유형
-    } else if (t === "ESTJ" && t === "INFP" && t === "ENFJ") {
+    } else if (t === "ESTJ" || t === "INFP" || t === "ENFJ") {
       type = errorType;
       // 지승완 유형
     } else {
       type = errorType;
     }
-
-    // INTJ
     return console.log(type);
   };
 
