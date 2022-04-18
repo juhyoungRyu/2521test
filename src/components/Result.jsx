@@ -1,21 +1,26 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Result.css";
-import { yelloTulip } from "../data.js";
+import { yelloTulip, redSportsCar, broken8tTruck } from "../data.js";
 
 const Result = (props) => {
-  useEffect(() => {
-    if (props.mbti) {
-      console.log(props.mbti);
-    }
-  }, []);
-
+  console.log(props.mbti);
   let type = [];
 
   const goYelloTulip = () => {
     type = yelloTulip;
   };
-  const go8tTruck = () => {};
-  const goRedSporty = () => {};
+  const go8tTruck = () => {
+    type = broken8tTruck;
+  };
+  const goRedSporty = () => {
+    type = redSportsCar;
+  };
+
+  if (props.mbti.join("") === "ISFJ") {
+    goYelloTulip();
+    console.log(type);
+    console.log(props.mbti);
+  }
 
   return (
     <div className="Result">
@@ -45,7 +50,7 @@ const Result = (props) => {
           <div className="reBtn" onClick={() => window.location.reload()}>
             다시 해보기
           </div>
-          w{/* sns btn */}
+          {/* sns btn */}
           <div className="snsBtn">
             <p
               className="githubBtn"
