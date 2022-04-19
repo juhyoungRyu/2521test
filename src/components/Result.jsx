@@ -1,9 +1,16 @@
 import React from "react";
 import "./Result.css";
-import { yelloTulip, redSportsCar, broken8tTruck, errorType } from "../data.js";
+import {
+  yelloTulip,
+  redSportsCar,
+  broken8tTruck,
+  djJoanOfArc,
+  errorType,
+} from "../data.js";
 
 const Result = (props) => {
   let type = [];
+
   const selectMbti = (t) => {
     console.log(t);
     if (t === "INFJ" || t === "ISFP" || t === "ISTJ" || t === "INTP") {
@@ -16,7 +23,7 @@ const Result = (props) => {
       type = errorType;
       // 문지웅 유형
     } else if (t === "ESTJ" || t === "INFP" || t === "ENFJ") {
-      type = errorType;
+      type = djJoanOfArc;
       // 지승완 유형
     } else {
       type = errorType;

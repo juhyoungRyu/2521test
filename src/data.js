@@ -2,6 +2,7 @@
 import ytPic from "./pic/yellotulip.jpg";
 import brokenTruck from "./pic/broken8tTruck.jpg";
 import redSporty from "./pic/redSportCar.png";
+import djJoan from "./pic/djJoan.jpg";
 import error from "./pic/error.jpg";
 // 질문 사진
 import qu1 from "./pic/qu1.png";
@@ -59,11 +60,16 @@ export const redSportsCar = new TypeMake(
   ]
 );
 
-// export const redSportsCar = new TypeMake(
-//   "꼰대기질 빨간 스포츠카",
-//   { img: redSporty, imgEx: "지승완" },
-//   ["대충 이런 설명1", "대충 이런 설명2", "대충 이런 설명3", "대충 이런 설명4"]
-// );
+export const djJoanOfArc = new TypeMake(
+  "정의로운 DJ 잔다르크",
+  { img: djJoan, imgEx: "지승완" },
+  [
+    "리더역할을 주도적으로 자주 합니다.",
+    "한번 마음을 연 상대에게 애정을 쏟아줍니다.",
+    "대충 이런 설명3",
+    "대충 이런 설명4",
+  ]
+);
 
 // export const redSportsCar = new TypeMake(
 //   "꼰대기질 빨간 스포츠카",
