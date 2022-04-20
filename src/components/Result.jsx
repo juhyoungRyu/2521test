@@ -5,6 +5,7 @@ import {
   redSportsCar,
   broken8tTruck,
   djJoanOfArc,
+  noFox,
   errorType,
 } from "../data.js";
 
@@ -20,7 +21,7 @@ const Result = (props) => {
     } else if (t === "ENFP" || t === "ESTP" || t === "ESFJ") {
       type = broken8tTruck;
     } else if (t === "ESFP" || t === "ENTP") {
-      type = errorType;
+      type = noFox;
       // 문지웅 유형
     } else if (t === "ESTJ" || t === "INFP" || t === "ENFJ") {
       type = djJoanOfArc;

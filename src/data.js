@@ -3,6 +3,7 @@ import ytPic from "./pic/yellotulip.jpg";
 import brokenTruck from "./pic/broken8tTruck.jpg";
 import redSporty from "./pic/redSportCar.png";
 import djJoan from "./pic/djJoan.jpg";
+import fox from "./pic/fox.jpg";
 import error from "./pic/error.jpg";
 // 질문 사진
 import qu1 from "./pic/qu1.png";
@@ -40,11 +41,11 @@ export const broken8tTruck = new TypeMake(
   "핸들이 고장난 8t 트럭",
   { img: brokenTruck, imgEx: "나희도" },
   [
-    "정의로운 사람입니다.",
-    "마음에 드는 사람이 있으면 적극적으로 표현하고 사랑을 쟁취합니다.",
-    "상대방의 말과 행동에 쉽게 상처를 받습니다.",
-    "열정이 넘칩니다.",
     "다혈질입니다.",
+    "열정이 넘칩니다.",
+    "정의로운 사람입니다.",
+    "상대방의 말과 행동에 쉽게 상처를 받습니다.",
+    "마음에 드는 사람이 있으면 적극적으로 표현하고 사랑을 쟁취합니다.",
   ]
 );
 
@@ -71,11 +72,17 @@ export const djJoanOfArc = new TypeMake(
   ]
 );
 
-// export const redSportsCar = new TypeMake(
-//   "꼰대기질 빨간 스포츠카",
-//   { img: redSporty, imgEx: "문지웅" },
-//   ["대충 이런 설명1", "대충 이런 설명2", "대충 이런 설명3", "대충 이런 설명4"]
-// );
+export const noFox = new TypeMake(
+  "질리지 않는 재간둥이 여우",
+  { img: fox, imgEx: "문지웅" },
+  [
+    "싸움보단 평화를 좋아합니다",
+    "인생을 즐겁게 살려고 합니다.",
+    "사람의 단점보단 장점을 보려 합니다",
+    "현재를 즐기며 주어진 삶에 감사합니다.",
+    "조직생활보다는 자유로울 때 능력을 발휘합니다.",
+  ]
+);
 
 export const errorType = new TypeMake(
   "이 유형은 무엇일까요",
