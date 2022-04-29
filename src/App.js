@@ -5,10 +5,9 @@ import Test from "./components/Test";
 
 const App = () => {
   const [start, setStart] = useState(false);
-
   return (
     <div className="App">
-      {start ? <Test /> : <Start func={() => setStart(true)} />}
+      ;{start ? <Test /> : <Start func={() => setStart(true)} />}
     </div>
   );
 };
